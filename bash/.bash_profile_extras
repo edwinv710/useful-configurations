@@ -1,6 +1,11 @@
 # Open chrome from command line (Mac)
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome &"
 
+# Use vim fro git diffs
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.d difftool
+
 # Fast refresh of .bash_profile
 refresh(){
 . ~/.bash_profile
