@@ -1,0 +1,20 @@
+# Open chrome from command line (Mac)
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome &"
+
+# Fast refresh of .bash_profile
+refresh(){
+. ~/.bash_profile
+}
+
+# Prints the current git branch
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Prints the current time
+current_time(){
+ date "+%b %d %I:%M %p"
+}
+
+# Setup custom color-coded prompt that includes : current time, user, host, working directory, current git branch, and starts command input in a new line.
+export PS1="\[\033[92m\]\$(current_time) \[\033[39m\]\u@\h \[\033[32m\]\w \[\033[33m\]\$(parse_git_branch)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\]\$\[\033[0m\] "
