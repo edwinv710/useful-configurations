@@ -55,3 +55,11 @@ let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " Misc
 set cursorline 
+let g:airline_theme='simple'
+set cm=blowfish2
+set gcr+=a:blinkon0
+
+" Snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
